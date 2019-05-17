@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Mobile.master.cs" Inherits="Site_Mobile" %>
+
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" href="Content/fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link type="text/css" href="Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="Content/css/util.css" rel="stylesheet" />
+    <link type="text/css" href="Content/css/main.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/js/main.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin-bottom: 108px;">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+        <table style="
+            position:fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    font-size: small;
+    background-color: #fff;" border="0">
+  <tr border="1">
+    <td><div align="center">
+      <p><asp:ImageButton ID="imgbtnShouYe" runat="server" ImageUrl="~/Images/shouye2.png" Width="30" Height="30" OnClick="imgbtnShouYe_Click" /></p>
+      <p>首页</p>
+    </div></td>
+    <td><div align="center">
+      <p><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/chazige.png" Width="30" Height="30" /></p>
+      <p>查资格</p>
+    </div></td>
+    <td><div align="center">
+      <p><asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/chaxuqiu.png" Width="30" Height="30" /></p>
+      <p>查需求</p>
+    </div></td>
+    <td><div align="center">
+        <p><asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/Images/guanzhu.png" Width="30" Height="30" /></p>
+      <p>关注</p>
+    </div></td>
+    <td><div align="center">
+        <p><asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/Images/faxian.png" Width="30" Height="30" /></p>
+      <p>发现</p>
+    </div></td>
+  </tr>
+</table>
+    </div>
+    </form>
+</body>
+</html>
